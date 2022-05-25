@@ -110,38 +110,35 @@ for (var i = 0; i < strings.length; i++) {
 df.push(parseInt(keyword));
 });
 
-let string = "";
-let tfidf = [];
-let tf_idf = [];
+for (let i = 0; i < 1843; i++) {
+    array[i]=[]
+    for (let j = 0; j < 15076; j++) {
+        array[i][j]=0.000000000000000;
+    }
+    
+}
+// console.log(array)
+
+
 function csvToArray(csv) {
 rows = csv.split("\n");
 for (var j = 0; j < rows.length; j++) {
     row = rows[j];
-    for (var i = 0; i < row.length; i++) {
-    if (row[i] == " ") {
-        tfidf.push(parseFloat(string));
-        string = "";
-    } else {
-        string = string.concat(row[i]);
-    }
-    }
-    tfidf.push(parseFloat(string));
-    tf_idf.push(tfidf);
-    tfidf = [];
+    elements=row.split(' ')
+    
+    array[parseInt(elements[0])][parseInt(elements[1])]=parseFloat(elements[2])
 }
-return tf_idf;
 }
 
-fs.readFile("tfidf_matrix.csv", (err, data) => {
+fs.readFile("tfidf_mat.txt", (err, data) => {
 if (err) {
     console.log(err);
 }
 var csv = data.toString();
 
-array = csvToArray(csv);
+csvToArray(csv);
 console.log(array);
 });
-
 
 app.get('/',(req,res) => {
 
@@ -277,7 +274,13 @@ app.post('/search',(req,res) => {
     // var pro_1="";
     var statements=[];
     for (let i = 0; i < 10; i++) {
-        statements[i]=fs.readFileSync("problems/problem"+String(ranking[i].index+1)+".txt").toString()
+        if (ranking[i].index < 900) {
+            statements[i]=fs.readFileSync("problems-1/problem"+String(ranking[i].index+1)+".txt").toString()
+        }
+        else{
+            statements[i]=fs.readFileSync("problems-2/problem"+String(ranking[i].index+1)+".txt").toString()
+        }
+        
         
         
         
