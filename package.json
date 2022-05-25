@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "modules.js",
+  "engines": {
+    "node": "16.13.0"
+  },
   "scripts" : {
-    "build": "set NODE_OPTIONS=--max-old-space-size=16192",
+    "build": "set NODE_OPTIONS=--max-old-space-size=16192 next start",
     "start": "node app.js"
   },
   "author": "",
