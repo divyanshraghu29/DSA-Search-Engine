@@ -10,10 +10,10 @@ const app = express();
 
 const dbUI = 'mongodb+srv://hackathon:gayatrima@cluster0.vy5ek.mongodb.net/search-engine?retryWrites=true&w=majority';
 
-const Port= process.env.Port || 3000;
+const PORT= process.env.PORT || 3000;
 
 mongoose.connect(dbUI,{useNewUrlParser:true , useUnifiedTopology: true})
-    .then((result) =>{ app.listen(Port)})
+    .then((result) =>{ app.listen(PORT)})
     .catch((err) =>{ console.log(err)});
 
 app.use(morgan('dev'));
