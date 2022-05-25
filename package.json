@@ -4,7 +4,8 @@
   "description": "",
   "main": "modules.js",
   "scripts" : {
-    "start": "cross-env NODE_OPTIONS=--max_old_space_size=8192 client/app.js"
+    "build": "set NODE_OPTIONS=--max-old-space-size=16192",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
