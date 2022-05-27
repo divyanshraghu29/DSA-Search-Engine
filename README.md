@@ -31,6 +31,7 @@ for i in range(1843):
     doc += 1
 Using this code we can create tf-idf matrix and than transfer it to a txt file.
 # Top 10 Search Results
+Code-
 let ranking = [];
     for(let i = 0; i < array.length; i++) {
         var si = 0;
