@@ -10,7 +10,7 @@ Use scrapper.py and scrap data from different websites
 # TF-IDF Matrix
 Use tf-idf-vector.py to make keywords.txt, df.txt and tf-idf-mat.txt file to use them in our app.js file
 
-'''
+```
 doc = 0
 tf_idf = {}
 for i in range(1843):
@@ -28,10 +28,10 @@ for i in range(1843):
         
         tf_idf[doc, token] = tf*idf
 
-    doc += 1 '''
+    doc += 1 ```
 Using this code we can create tf-idf matrix and than transfer it to a txt file.
 # Top 10 Search Results
-'''
+```
 let ranking = [];
     for(let i = 0; i < array.length; i++) {
         var si = 0;
@@ -60,7 +60,7 @@ let ranking = [];
     // }
     ranking.sort((a, b) => {
         return b.similarityIndex - a.similarityIndex;
-    }) '''
+    }) ```
 Using above code we can find top 10 results for our query after doing preprocessing on our query and finding it's tf-idf values.
 # Packages
 Apart from package.json install-
