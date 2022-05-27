@@ -28,7 +28,8 @@ for i in range(1843):
         
         tf_idf[doc, token] = tf*idf
 
-    doc += 1 ```
+    doc += 1 
+```
 Using this code we can create tf-idf matrix and than transfer it to a txt file.
 # Top 10 Search Results
 ```
@@ -60,9 +61,12 @@ let ranking = [];
     // }
     ranking.sort((a, b) => {
         return b.similarityIndex - a.similarityIndex;
-    }) ```
+    }) 
+ ```
 Using above code we can find top 10 results for our query after doing preprocessing on our query and finding it's tf-idf values.
 # Packages
 Apart from package.json install-
+```
 node - 16.15.0
 npm - 8.5.5
+```
