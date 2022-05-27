@@ -4,4 +4,8 @@ This repository is a part of a project whose problem statement is based on creat
 # TF-IDF
 This Algorithm is based on the vector space model wherein each document is tokenized into a vector who's indices correspond to a unique term in an input query/document. Subsequently, we caclulate the TF-IDF for each term formula in the document vector, where TF-IDF is defined to be:
 ![image](https://user-images.githubusercontent.com/72646890/170714852-db0a93f6-98d2-4229-9791-f31b4c0a5dc8.png)
-
+Ranking the similarity measure for each document, one can determine which is the most relevant to a given query.
+# Data Scrapping
+Use scrapper.py and scrap data from different websites
+# TF-IDF Matrix
+Use tf-idf-vector.py to make keywords.txt, df.txt and tf-idf-mat.txt file to use them in our app.js file
