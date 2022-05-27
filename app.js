@@ -137,7 +137,7 @@ if (err) {
 var csv = data.toString();
 
 csvToArray(csv);
-console.log(array);
+// console.log(array);
 });
 
 app.get('/',(req,res) => {
@@ -184,7 +184,7 @@ app.post('/search',(req,res) => {
     for (var i = 0; i < 15076; i++) {
         doc_freq.set(keywords[i], df[i]);
     }
-    console.log(doc_freq);
+    // console.log(doc_freq);
 
     function calculateMagnitude(vector) {
         let magnitude = 0
@@ -236,7 +236,7 @@ app.post('/search',(req,res) => {
     var q=stemmer.tokenizeAndStem(question.toString(), false)
 
     let tf_idf_query = createVectorSpaceModel(stemmer.tokenizeAndStem(question.toString(), false));
-    console.log(tf_idf_query)
+    // console.log(tf_idf_query)
     let ranking = [];
     for(let i = 0; i < array.length; i++) {
         var si = 0;

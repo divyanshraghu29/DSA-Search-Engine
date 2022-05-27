@@ -10,6 +10,24 @@
         #maincontainer{
             min-height: 100vh;
         }
+        .py-3 {
+          text-align: center;
+            font-size: 50px;
+            background: linear-gradient(to left,
+                    violet,
+                    indigo,
+                    blue,
+                    green,
+                    yellow,
+                    orange,
+                    red);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .text-dark {
+          color: #466a8f!important;
+        }
         .result {
             line-height: 1.5em;
             height: 3em;
@@ -19,12 +37,12 @@
             width: 100%; */
         }
     </style>
-    <title>Document</title>
+    <title>Search Results</title>
 </head>
 <body>
     <div class="container my-3" id="maincontainer">
-      <h1 class="py-3">Search results</h1>
-      <h4><a href="<%= url_1 %>" class="text-dark"><%= title_1 %></a> </h4>
+      <h1 class="py-3">Search Results</h1>
+      <h4><a  href="<%= url_1 %>" class="text-dark"><%= title_1 %></a> </h4>
           <div class="result">
                       <p><%= statement_1 %></p>
                 </div>  
@@ -67,64 +85,5 @@
       
     </div>
     
-    
-
-
-
-    <div class="question">
-      <div class="title"></div>
-      <div class="url">
-        <a href=""></a>
-      </div>
-      <div class="body"></div>
-    </div>
-    <div class="question">
-      <div class="title"></div>
-      <div class="url">
-        <a href=""></a>
-      </div>
-      <div class="body"></div>
-    </div>
-    <div class="question">
-      <div class="title"></div>
-      <div class="url">
-        <a href=""></a>
-      </div>
-      <div class="body"></div>
-    </div>
-    <div class="question">
-      <div class="title"></div>
-      <div class="url">
-        <a href=""></a>
-      </div>
-      <div class="body"></div>
-    </div>
-    <div class="question">
-      <div class="title"></div>
-      <div class="url">
-        <a href=""></a>
-      </div>
-      <div class="body"></div>
-    </div>
 </body>
 </html>
-<script>
-    // loadingDiv.innerHTML = `Loading...`;
-    const questions = p
-  
-    //fetch
-    // try {
-    //   const res = await fetch(`/search`, {
-    //     method: "POST",
-    //   });
-    //   const data = await res.json();
-    //   console.log(data);
-    // //   loadingDiv.innerHTML = ``;
-    //   for (let i = 0; i < 5; i++) {
-    //     titles[i].innerHTML = `<h3>${data[i].title}</h3>`;
-    //     console.log(titles[i]);
-    //   }
-    // } catch (error) {
-    //   alert(error);
-    // }
-</script>
